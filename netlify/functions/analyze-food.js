@@ -27,7 +27,7 @@ exports.handler = async (event, context) => {
     const { messages, model } = JSON.parse(event.body);
 
     // Default to Gemini Flash if no model specified
-    const selectedModel = model || 'google/gemini-flash-1.5-8b';
+    const selectedModel = model || 'google/gemini-1.5-flash';
 
     // Call OpenRouter API
     const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
